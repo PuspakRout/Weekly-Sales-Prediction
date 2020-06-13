@@ -1,0 +1,16 @@
+--- 
+basic_scaling: 
+  idle_timeout: 10m
+  max_instances: 2
+entrypoint: "gunicorn -b 0.0.0.0:8080 main:server"
+env_variables: 
+  CLOUD_SQL_CONNECTION_NAME: "trial-a54ff:us-central1:myinstance"
+  CLOUD_SQL_DATABASE_NAME: Forecast
+  CLOUD_SQL_PASSWORD: Pixel
+  CLOUD_SQL_USERNAME: root
+resources: 
+  cpu: 1
+  disk_size_gb: 10
+  memory_gb: 1
+runtime: python37
+service: simple-dash-app-engine-app
