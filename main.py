@@ -126,7 +126,7 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
 
 # -------------------------- MAIN ---------------------------- #
 
-#subprocess.Popen('python3 scheduled.py')
+#subprocess.Popen('python3 scheduled.py')   # This is used to periodic update of weekly sales
 
 if __name__ == '__main__':
     app.run_server(host='0.0.0.0', port=8080, debug=True, use_reloader=False)
